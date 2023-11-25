@@ -1,0 +1,25 @@
+
+{
+    "version": "1.0",
+    "projections": {
+        "storage": {
+            "imports": ["./nifcloud-models/storage.json"],
+
+            "plugins": {
+                "rust-client-codegen": {
+                    "service": "com.nifcloud.api.storage#ObjectStorageService",
+                    "module": "storage",
+                    "moduleVersion": "0.0.0-local",
+                    "moduleAuthors": ["heriet <heriet@heriet.info>"],
+                    "moduleDescription": "NIFCLOUD SDK for Object Storage Service",
+                    "moduleRepository": "https://github.com/heriet/nifcloud-sdk-rust",
+                    "license": "Apache-2.0",
+
+                    "runtimeConfig": {
+                        "version": "DEFAULT"
+                    }
+                }
+            }
+        }
+    }
+}

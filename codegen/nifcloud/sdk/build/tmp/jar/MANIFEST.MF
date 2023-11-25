@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Smithy-Tags: nifcloud-sdk-rust.codegen.nifcloud, nifcloud-sdk-rust.codeg
+ en.nifcloud:sdk, nifcloud-sdk-rust.codegen.nifcloud:sdk:unspecified
+

@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  smithy-rs:
+    image: smithy-rs-build-image:latest
+    container_name: nifcloud-sdk-rust-dev
+    working_dir: /work
+    volumes:
+      - ./:/work
+      - ./codegen/gradle/build:/home/build/.gradle
+      - ./maven_repository:/root/.m2/repository
+      - ${REPO_SMITHY_RS}:/smithy-rs
+
+  dev:
+    build:
+        context: ./
+        dockerfile: dev.dockerfile
+    image: nifcloud-sdk-rust-dev:latest
+    container_name: nifcloud-sdk-rust-dev
+    volumes:
+      - ./:/work
+      - ./.nifcloud:/nifcloud

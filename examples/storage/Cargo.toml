@@ -1,0 +1,17 @@
+[package]
+name = "storage-examples"
+version = "0.1.0"
+authors = ["heriet <heriet@heriet.info>"]
+edition = "2021"
+publish = false
+
+[dependencies]
+storage= { path = "../../sdk/storage", features = ["behavior-version-latest"]}
+aws-smithy-runtime = "1.0.1"
+chrono = "0.4.31"
+aws-sign-v4 = "0.2.0"
+sha256 = "1.4.0"
+hyper = { version = "0.14.25", features = ["client", "full"] }
+tokio = { version = "1.20.1", features = ["full"] }
+rustls = "0.21.9"
+hyper-rustls = { version = "0.24.2", features = ["http2", "webpki-roots"] }
